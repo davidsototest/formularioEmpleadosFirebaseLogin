@@ -1,0 +1,28 @@
+<h1>  ACTUALIZA </h1>
+
+<div class="container">
+  <div class="col">
+    <div class="col-md-8">
+      <div class="form-horizontal">
+        <form class="form-group row">
+          <div class="form-group col-md-3">
+            <label for="nombre" class="col-sm-2 control-label">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombre"><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellido"><br>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo" id="cargo" placeholder="Cargo" [(ngModel)]="cargo"><br>
+
+            <label for="salario">Salario:</label>
+            <input type="number" name="salario" id="salario" [(ngModel)]="salario"><br><br>
+
+            <button style="margin-left: 20px;" type="submit" class="btn btn-primary" (click)="actualizarEmpleado()">Aplicar</button>
+            <!--<button type="submit" class="btn btn-primary" (click)="eliminarEmpleado()">Eliminar Empleado</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

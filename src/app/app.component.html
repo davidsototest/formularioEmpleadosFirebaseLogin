@@ -1,0 +1,28 @@
+
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
+<nav class="navbar navbar-expand-sm bg-light">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/proyectos">Proyectos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/quienes">Quienes somos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="contacto">Contactos</a>
+    </li>
+    <li class="nav-item" style="margin-left: 800px;" *ngIf="!estaLogueado()" >
+      <a class="nav-link" routerLink="/login" >LogIn</a>
+    </li>
+    <li class="nav-item" style="margin-left: 800px;" *ngIf="estaLogueado()" >
+      <a class="nav-link" (click)="logout()">LogOut</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>

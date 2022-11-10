@@ -1,0 +1,16 @@
+<div>
+  <br><br><br>
+  <form class="form-group row" #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
+    <div class="form-group col-md-3" >
+      <input type="email" name="email" placeholder="ingrese email" class="form-control" ngModel>
+    </div >
+    <div class="form-group col-md-3">
+      <input type="password" name="password" placeholder="ingrese la contrasena" class="form-control" ngModel>
+    </div >
+    <div class="form-group col-md-3">
+      <button type="submit" class="btn btn-primary">Ingresar</button>
+    </div>
+
+  </form>
+
+</div>

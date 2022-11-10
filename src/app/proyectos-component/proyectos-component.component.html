@@ -1,0 +1,40 @@
+
+<h1> PROYECTOS - {{titulo}} </h1>
+<h6>
+  <ul>
+    <div *ngFor="let empleado of empleados" let y=index >
+       {{empleado.nombre}} {{empleado.apellido}} {{empleado.cargo}}  {{ empleado.salario }}
+    </div>
+
+  </ul>
+</h6>
+
+<div class="container">
+  <div class="col">
+    <div class="col-md-8">
+      <div class="form-horizontal">
+        <form class="form-group row">
+          <div class="form-group col-md-3">
+            <label for="nombre" class="col-sm-2 control-label">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="nombre"><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Apellido" [(ngModel)]="apellido"><br>
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" name="cargo" id="cargo" placeholder="Cargo" [(ngModel)]="cargo"><br>
+
+            <label for="salario">Salario:</label>
+            <input type="number" name="salario" id="salario" [(ngModel)]="salario"><br><br>
+
+            <button type="submit" class="btn btn-primary" (click)="generarEmpleados()">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center;">
+  <button class="btn btn-primary" (click)="volverHome()" >Ir al inicio</button>
+</div>
